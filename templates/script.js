@@ -9,6 +9,10 @@ let uploadButton = document.getElementById("upload-button");
 let DownloadButton = document.getElementById("Download-button");
 let resetfilterchoice=document.getElementById("reset-button");
 let image = document.getElementById("chosen-image");
+// var photo;
+// window.onload = function(){
+
+// }
 function resetFilter(){
     filterA.value = "0";
     filterB.value = "100";
@@ -30,7 +34,12 @@ uploadButton.onchange = () => {
         // image.setAttribute("src", reader.result);
         // context.drawImage(img, 100, 100);
         image.setAttribute("src", reader.result);
-        context.drawImage(image, 0,0);
+        // context.drawImage(image, 0,0);
+        //trying cv code
+        let dst = new cv.Mat();
+        img = cv.imread(image)
+        cv.cvtColor(img, dst, cv.COLOR_RGBA2GRAY, 0);
+        cv.imshow('myCanvas', dst);
     }
 }
 var canvas = document.getElementById('myCanvas'),
