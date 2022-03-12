@@ -9,8 +9,15 @@ let uploadButton = document.getElementById("upload-button");
 let DownloadButton = document.getElementById("Download-button");
 let resetfilterchoice=document.getElementById("reset-button");
 let image = document.getElementById("chosen-image");
+<<<<<<< HEAD
 let filterOPENCV1=document.getElementById("opencvfilter1");
 
+=======
+// var photo;
+// window.onload = function(){
+
+// }
+>>>>>>> c257b9cadb41b4267d936882d1e3e9403662c520
 function resetFilter(){
     filterA.value = "0";
     filterB.value = "100";
@@ -27,12 +34,30 @@ uploadButton.onchange = () => {
     let reader = new FileReader();
     reader.readAsDataURL(uploadButton.files[0]);
     reader.onload = () => {
+        // image.setAttribute("src", reader.result);
+        // context.drawImage(img, 100, 100);
         image.setAttribute("src", reader.result);
+<<<<<<< HEAD
         img = cv.imread(image);
         cv.imshow('myCanvas', img);
+=======
+        // context.drawImage(image, 0,0);
+        //trying cv code
+        let dst = new cv.Mat();
+        img = cv.imread(image)
+        cv.cvtColor(img, dst, cv.COLOR_RGBA2GRAY, 0);
+        cv.imshow('myCanvas', dst);
+>>>>>>> c257b9cadb41b4267d936882d1e3e9403662c520
     }
     
 }
+<<<<<<< HEAD
+=======
+var canvas = document.getElementById('myCanvas'),
+context = canvas.getContext('2d');
+
+
+>>>>>>> c257b9cadb41b4267d936882d1e3e9403662c520
 
 let sliders = document.querySelectorAll(".filter input[type='range']");
 sliders.forEach( slider => {
