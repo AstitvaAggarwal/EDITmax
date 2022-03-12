@@ -27,6 +27,7 @@ uploadButton.onchange = () => {
     let reader = new FileReader();
     reader.readAsDataURL(uploadButton.files[0]);
     reader.onload = () => {
+<<<<<<< HEAD
         // image.setAttribute("src", reader.result);
         // context.drawImage(img, 100, 100);
         image.setAttribute("src", reader.result);
@@ -38,6 +39,11 @@ context = canvas.getContext('2d');
 
 
 
+=======
+        image.setAttribute("src", reader.result);
+    }
+}
+>>>>>>> 7200c443fdfba9abcb8c66d0a716796036f4c572
 let sliders = document.querySelectorAll(".filter input[type='range']");
 sliders.forEach( slider => {
     slider.addEventListener("input", addFilter);
