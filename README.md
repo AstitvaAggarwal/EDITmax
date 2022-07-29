@@ -1,4 +1,4 @@
-## LOC 4.0 KHISKOLI - IMAGE ENHANCER
+## EDITmax - IMAGE ENHANCER
 
 ### Problem Statement
 
